@@ -1,14 +1,14 @@
 /**
- * Calculator module with basic arithmetic operations
+ * Calculator module with basic arithmetic operations (async)
  */
 
 /**
  * Add two numbers
  * @param {number} a - First number
  * @param {number} b - Second number
- * @returns {number} Sum of a and b
+ * @returns {Promise<number>} Sum of a and b
  */
-function add(a, b) {
+async function add(a, b) {
   return a + b;
 }
 
@@ -16,9 +16,9 @@ function add(a, b) {
  * Subtract two numbers
  * @param {number} a - First number
  * @param {number} b - Second number
- * @returns {number} Difference of a and b
+ * @returns {Promise<number>} Difference of a and b
  */
-function subtract(a, b) {
+async function subtract(a, b) {
   return a - b;
 }
 
@@ -26,9 +26,9 @@ function subtract(a, b) {
  * Multiply two numbers
  * @param {number} a - First number
  * @param {number} b - Second number
- * @returns {number} Product of a and b
+ * @returns {Promise<number>} Product of a and b
  */
-function multiply(a, b) {
+async function multiply(a, b) {
   return a * b;
 }
 
@@ -36,10 +36,10 @@ function multiply(a, b) {
  * Divide two numbers
  * @param {number} a - Dividend
  * @param {number} b - Divisor
- * @returns {number} Quotient of a and b
+ * @returns {Promise<number>} Quotient of a and b
  * @throws {Error} If divisor is zero
  */
-function divide(a, b) {
+async function divide(a, b) {
   if (b === 0) {
     throw new Error("Division by zero is not allowed");
   }
