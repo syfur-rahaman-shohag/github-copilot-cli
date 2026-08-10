@@ -1,6 +1,6 @@
 ## Overview
 
-This repository demonstrates a complete workflow using the [GitHub Copilot CLI] (https://docs.github.com/en/copilot/how-tos/copilot-cli), including project initialization, code generation for a basic CLI calculator, automated issue management, unit testing, and pull request workflows.
+This repository demonstrates a complete workflow using the [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli), including project initialization, code generation for a basic CLI calculator, automated issue management, unit testing, and pull request workflows.
 
 ## Features
 
