@@ -1,61 +1,79 @@
-# Copilot Calculator
+## Overview
 
-Minimal Node.js calculator demonstrating async arithmetic functions and a small CLI wrapper.
+This repository demonstrates a complete workflow using the [GitHub Copilot CLI] (https://docs.github.com/en/copilot/how-tos/copilot-cli), including project initialization, code generation for a basic CLI calculator, automated issue management, unit testing, and pull request workflows.
 
-## What this repo contains
-- calculator.js — async add, subtract, multiply, divide functions
-- index.js — CLI example and command-line wrapper
-- __tests__/calculator.test.js — Jest tests
+## Features
 
-## Requirements
-- Node.js (recommended v16+)
-- npm (bundled with Node.js)
+- **CLI-Assisted Development:** Generate, refactor, and edit Node.js code directly from the terminal.
+- **Calculator Functionality:** Core mathematical operations (addition, subtraction, multiplication, and division).
+- **Issue & PR Automation:** Create, list, review, and summarize GitHub issues and pull requests using Copilot commands.
+- **Testing & Debugging Assistance:** AI-assisted unit test generation and interactive debugging support.
 
-## Setup
-1. Clone the repo and change directory:
-   git clone <repo-url>
-   cd copilot-calculator
+### Technologies Used
 
-2. Install dependencies (none are listed in package.json, but install dev tooling for tests):
-   npm install
-   npm install --save-dev jest
+* **Runtime Environment:** [Node.js](https://nodejs.org/) (v22+ required)
+* **CLI Engine:** [GitHub Copilot CLI](https://github.com/github/copilot-cli) (`@github/copilot` / `@githubnext/copilot-cli`)
+* **Version Control & Management:** [Git](https://git-scm.com/) and [GitHub CLI](https://cli.github.com/) (`gh`)
+* **Testing Framework:** [Jest](https://jestjs.io/) (for automated unit testing)
 
-## Run the CLI
-- Show built-in examples and/or run an operation:
-  node index.js
-  node index.js add 2 3
-  node index.js multiply 6 7
+## Installation
 
-## Use as a module
-Calculator functions are async. Example:
+1. **Install Copilot CLI globally:**
 
-```js
-const calculator = require('./calculator');
-
-(async () => {
-  const sum = await calculator.add(2, 3);
-  console.log(sum); // 5
-})();
+```bash
+npm install -g @githubnext/copilot-cli
 ```
 
-## Tests
-Run tests with Jest:
+## If npm installation fails, you can install via WinGet:
+```bash
+winget install --id GitHub.cli
+```
+2. **Verify installation:**
+```bash
+copilot --version
+```
 
-  npm test
+**Running the Application**
+Execute the calculator locally:
+```bash
+node calculator.js
+```
 
-If `npm test` fails because Jest is not installed, run:
+**Copilot CLI Commands**
+Generate or Refactor Code:
+```bash
+copilot code "Create a Node.js calculator with add, subtract, multiply, divide functions"
+copilot code "Refactor calculator.js to use async functions"
+```
+**Message Issues:**
+```bash
+copilot issue create "Add calculator functionality"
+copilot issue list
+```
 
-  npm install --save-dev jest
-  npx jest
-
-Note: tests expect async functions and assert behavior (including division-by-zero rejection).
-
+**Manage Pull Requests:**
+```bash
+copilot pr create
+copilot pr review
+```
+**Generate Tests:**
+```bash
+copilot code "Write Jest tests for calculator.js"
+```
 ## Contributing
-PRs and issues welcome. Keep changes small and add tests for new behavior.
 
-## License
-Add or update a LICENSE file for the chosen license.
+To contribute:
 
----
+1. Fork the repository.
+2. Create a branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
 
-If you want the README adjusted (node version, add badges, or include CI setup), say what to include and it will be updated.
+## Contact
+
+For questions or suggestions, please contact:
+
+- **Name**: Syfur Rahaman Shohag
+- **Email**: [syfur.srs@gmail.com](mailto:syfur.srs@gmail.com)
+- **GitHub**: [https://github.com/syfur-rahaman-shohag](https://github.com/syfur-rahaman-shohag)
